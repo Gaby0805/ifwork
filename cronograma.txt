@@ -1,0 +1,33 @@
+primeiro dia
+1º momento
+	apresentação da equipe 
+	explicar como vai funcionar o mini curso
+	tecnologias que seram usadas
+	slide do piton básico0		
+
+2º momento 
+	// caso precise instalação das bibliotecas
+	terminal{
+	pip install flet 
+	pip install flet --upgrade
+	pip install flet_route
+	pip install flet_route --upgrade
+	}
+	vscode 
+	{
+	python
+	drácula theme
+	}
+3º momento
+	 importação das bibliotecas
+	 criar usuarios a base de dict
+	 criação da janela flet
+	 criação dos textfields e botão
+	 criação da def para verificar login
+	 personalização da janela
+4ºmomento
+	explicação da biblioteca do flet route
+	criação do page.view
+	ligar a index_view para um dashboard
+	
+	 
