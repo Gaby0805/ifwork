@@ -26,18 +26,13 @@ def login_view(page: ft.Page):
     gmail = ft.TextField(label="email", hint_text="use @gmail.com" , width=400 )
     password = ft.TextField(label="senha", password=True, can_reveal_password=True, max_length=20, width=400)
     send_button = ft.CupertinoFilledButton(content=ft.Text("enviar"),opacity_on_click=0.7, on_click=verificar )
+    space  = ft.Text('\n\n\n\n\n\n\n\n')
     page.add(
-        ft.Container(
-            content=ft.Column(
-                controls=[
-                    gmail,
-                    password,
-                    send_button,
-                ],
-                alignment=ft.MainAxisAlignment.CENTER,  # Centralizar verticalmente
-            ),
-            alignment=ft.alignment.center_left,  # Centralizar verticalmente, alinhamento à esquerda
-        )
+        ft.Row(controls=[ft.Container(content=space)]),
+        ft.Row(controls=[gmail],alignment=ft.MainAxisAlignment.CENTER),
+        ft.Row(controls=[password],alignment=ft.MainAxisAlignment.CENTER),
+        ft.Row(controls=[send_button],alignment=ft.MainAxisAlignment.CENTER),
+
     )
 
 
