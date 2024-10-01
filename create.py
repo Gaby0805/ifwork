@@ -1,7 +1,7 @@
 import flet as ft
 from flet_route import Params, Basket
 
-user_dict = {}
+user_dict = {"gabriel":{"gmail":"sexo","senha":"111"},"jorge":{"gmail":"12355","senha":"sexo2341"}}
 
 def create_user(page:ft.Page, params:Params,basket:Basket ):
     
@@ -24,7 +24,7 @@ def create_user(page:ft.Page, params:Params,basket:Basket ):
     send_button = ft.ElevatedButton("criar",on_click=send)
     excluir_item = ft.ElevatedButton("excluir", on_click=lambda e: page.go("/excluir"))
     ft.View(
-            "/criacao",controls=[
+            "/create",controls=[
             nome,
             gmail,
             senha,
