@@ -23,8 +23,9 @@ def create_user(page:ft.Page, params:Params,basket:Basket ):
     senha = ft.TextField(label='senha' )
     send_button = ft.ElevatedButton("criar",on_click=send)
     excluir_item = ft.ElevatedButton("excluir", on_click=lambda e: page.go("/excluir"))
-    ft.View(
-            "/create",controls=[
+    return ft.View(
+            "/create",
+            controls=[
             nome,
             gmail,
             senha,

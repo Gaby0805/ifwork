@@ -2,7 +2,7 @@ import flet as ft
 from  create import user_dict
 from flet_route import Basket, Params
 
-def delete(page: ft.Page):
+def delete(page: ft.Page, basket: Basket, params:Params):
     def pop_item(user):
         user_dict.pop(user)
         
@@ -14,6 +14,15 @@ def delete(page: ft.Page):
     lista_user = ft.Dropdown(label="usuario para deletar", options=[ft.dropdown.Option(i) for i in user_dict])
     delete_user_button = ft.ElevatedButton("deletar usuario", on_click=delete_user)
     voltar = ft.ElevatedButton("voltar", on_click=lambda e: page.go("/create"))
-    page.add(lista_user,delete_user_button)
-ft.app(delete)
+    return ft.View(
+        "/excluir",
+        controls=[
+            lista_user,
+            delete_user_button,
+            voltar
+            
+            
+        ]
+        
+    )
         
